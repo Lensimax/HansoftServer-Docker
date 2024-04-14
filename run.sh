@@ -22,8 +22,6 @@ else
 		echo $'\n ' >> "$CONFIGFILE"
 	done
 
-	cat $CONFIGFILE
-
 	echo "Configuring server..."
 
 	./HPMServer -CreateConfig $CONFIGFILE

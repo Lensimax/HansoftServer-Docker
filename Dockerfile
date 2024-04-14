@@ -23,7 +23,6 @@ RUN unzip -d /opt/ HansoftServerX64.zip
 RUN rm HansoftServerX64.zip
 
 # Copy server config and run script
-# COPY server.config /opt/
 COPY run.sh /opt/
 
 # create user Hansoft

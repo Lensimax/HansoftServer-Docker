@@ -1,6 +1,10 @@
 
 # Hansoft Server Docker
 
+[![Docker Stars](https://img.shields.io/docker/stars/lensimax/hansoftserver.svg)](https://hub.docker.com/repository/docker/lensimax/hansoftserver/general)
+[![Docker Pulls](https://img.shields.io/docker/pulls/lensimax/hansoftserver
+)](https://hub.docker.com/repository/docker/lensimax/hansoftserver/general)
+
 This repository provides a streamlined approach to setting up and running a Hansoft Server using Docker. Docker is a prevalent containerization platform that enables you to execute applications within isolated sandbox environments, promoting portability and reproducibility.
 
 ## Create your own Hansoft server

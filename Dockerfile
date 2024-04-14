@@ -18,8 +18,8 @@ RUN unzip -d /opt/ HansoftServerX64.zip
 RUN rm HansoftServerX64.zip
 
 # Copy server config and run script
-COPY server.config /opt/HansoftServer/
-COPY run.sh /opt/HansoftServer
+# COPY server.config /opt/
+COPY run.sh /opt/
 
 # create user Hansoft
 RUN useradd -m hansoft && \
@@ -34,9 +34,11 @@ WORKDIR /opt/HansoftServer
 EXPOSE 50256
 
 # Set user right
-RUN chown -R hansoft:hansoft /opt/HansoftServer
+RUN chown -R hansoft:hansoft /opt/
 USER hansoft
 
-CMD ["/bin/bash", "/opt/HansoftServer/run.sh"]
+VOLUME /opt/HansoftServer
+
+CMD ["/bin/bash", "/opt/run.sh"]
 
 

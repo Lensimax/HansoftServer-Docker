@@ -1,7 +1,12 @@
-# pull base image
 FROM ubuntu:20.04
 
-ARG HANSOFT_VERSION
+ARG HANSOFT_VERSION=11.1006
+
+# Env variables
+ENV HANSOFT_SERVER_NAME="My Hansoft Server"
+ENV HANSOFT_SERVER_DATABASE_NAME="My Projects"
+ENV HANSOFT_SERVER_DATABASE_PASSWORD="qwerty"
+ENV HANSOFT_SERVER_ADMIN_PASSWORD="qwerty"
 
 RUN apt clean
 RUN apt update
@@ -37,7 +42,6 @@ EXPOSE 50256
 RUN chown -R hansoft:hansoft /opt/
 USER hansoft
 
-VOLUME /opt/HansoftServer
 
 CMD ["/bin/bash", "/opt/run.sh"]
 

@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  hansoft-server:
+    container_name: hansoft-server
+    image: lensimax/hansoftserver:11.1006
+    restart: always
+    environment:
+      - HANSOFT_SERVER_NAME="Hansoft Server"
+      - HANSOFT_SERVER_DATABASE_NAME="My Projects"
+      - HANSOFT_SERVER_DATABASE_PASSWORD="azerty"
+      - HANSOFT_SERVER_ADMIN_PASSWORD="azerty"
+    volumes:
+        - HansoftServerData:/opt/HansoftServer/
+    ports:
+        - "50256:50256"
+volumes:
+  HansoftServerData:
